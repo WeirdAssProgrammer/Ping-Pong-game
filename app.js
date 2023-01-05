@@ -55,5 +55,7 @@ document.addEventListener("mousemove", (e) => {
   // e is an obj that has x and y props
   playerPaddle.position = (e.y / window.innerHeight) * 100;
 }); //make the player paddle move with the mouse
-
+document.addEventListener("touchmove", (e) => {
+  playerPaddle.position = (e.y / window.innerHeight) * 100;
+});
 window.requestAnimationFrame(update); //infinite loop that will keep running untill u close the browser
